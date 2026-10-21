@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3873A9?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![SQL](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Data Cleaning](https://img.shields.io/badge/Data%20Cleaning-Completed-success?style=for-the-badge)
 
 An end-to-end data analysis project for a coffee shop chain's relational database. This phase focuses on thorough data cleaning, validation, memory optimization, and schema preparation using Python (Pandas) across **9 relational datasets** to prepare for SQL ingestion and database modeling.
