@@ -1,10 +1,8 @@
-# coffee_project
-
-# ☕ Coffee Shop Chain Data Analysis Project
+# Coffee Shop Chain Data Analysis Project
 
 ![Python](https://img.shields.io/badge/Python-3873A9?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![SQL](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Data Cleaning](https://img.shields.io/badge/Data%20Cleaning-Completed-success?style=for-the-badge)
 
 An end-to-end data analysis project for a coffee shop chain's relational database. This phase focuses on thorough data cleaning, validation, memory optimization, and schema preparation using Python (Pandas) across **9 relational datasets** to prepare for SQL ingestion and database modeling.
@@ -16,7 +14,7 @@ An end-to-end data analysis project for a coffee shop chain's relational databas
 | Original File | Cleaned Output File | Key Primary / Foreign Keys | Description & Status |
 | :--- | :--- | :--- | :--- |
 | `customers.csv` | `customers_cleaned.csv` | `customer_id` | Customer profiles, dates, and demographic info |
-| `Dates.csv` | `Dates_cleaned.csv` | `transaction_date` / `Date_ID` | Time dimension table (Days, Weeks, Quarters, Years) |
+| `Dates.csv` | `Dates_cleaned.csv` | `transaction_date` | `Date_ID` | Time dimension table (Days, Weeks, Quarters, Years) |
 | `generations.csv` | `generations_cleaned.csv` | `birth_year` | Generational age brackets |
 | `pastry_inventory.csv` | `pastry_inventory_cleaned.csv` | `sales_outlet_id`, `product_id` | Daily pastry stock, sales, and waste tracking |
 | `product.csv` | `product_cleaned.csv` | `product_id` | Master product catalog, categories, prices, and promos |
@@ -53,7 +51,7 @@ An end-to-end data analysis project for a coffee shop chain's relational databas
 * **Mass Type Conversion:** Converted all foreign key columns (`sales_outlet_id`, `staff_id`, `customer_id`, `product_id`, `order_number`, `line_item_id`, `quantity`) to `int32`, `transaction_id` to `int64`, and price/amount fields to `float64`.
 
 ### 7. `sales_targets.csv`
-* **Column Renaming:** Fixed spacing typo in column header (`merchandise _goal` ➡️ `merchandise_goal`).
+* **Column Renaming:** Fixed spacing typo in column header (`merchandise _goal` to `merchandise_goal`).
 * **Bulk Casting:** Transformed all numerical target columns (`beans_goal`, `beverage_goal`, `food_goal`, `merchandise_goal`, `total_goal`) to `int32` in a single operation.
 
 ### 8. `sales_outlet.csv`
@@ -68,6 +66,6 @@ An end-to-end data analysis project for a coffee shop chain's relational databas
 
 ##  Technical Highlights & Improvements
 
-* **SQL Reserved Keyword Compliance:** Resolved reserved keyword conflicts (e.g., `order` ➡️ `order_number`).
+* **SQL Reserved Keyword Compliance:** Resolved reserved keyword conflicts (e.g., `order` to `order_number`).
 * **Significant Memory Footprint Reduction:** Memory usage reduced across all DataFrames by transforming object/string types into `category` and downcasting integer sizes.
 * **Schema Integrity:** Standardized primary and foreign key columns across all 9 datasets for relational joining.
